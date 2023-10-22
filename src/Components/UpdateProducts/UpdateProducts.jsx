@@ -24,7 +24,7 @@ const UpdateProducts = () => {
         const updatedProduct = { productName, brandName, image, price, type, rating, description }
 
         // fetching data from server using api
-        fetch(`https://brand-shop-server-oibkfsmlr-fazlulkarimhridoy.vercel.app/product/${_id}`, {
+        fetch(`http://localhost:5000/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -125,7 +125,7 @@ const UpdateProducts = () => {
                                     <div>
                                         <select required defaultValue={type} name="type" className="w-full border-2 rounded-lg border-gray-200 p-3 text-sm">
                                             <option value="">Select Type</option>
-                                            <option value="">Half Sleeve</option>
+                                            <option value="Half Sleeve">Half Sleeve</option>
                                             <option value="Full Sleeve">Full Sleeve</option>
                                             <option value="Sleeveless">Sleeveless</option>
                                             <option value="Polo T-shirts">Polo T-shirts</option>

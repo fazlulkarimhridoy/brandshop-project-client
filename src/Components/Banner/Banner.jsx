@@ -9,15 +9,15 @@ const Banner = () => {
                             <div className="relative h-64 sm:h-80 lg:h-full">
                                 <img
                                     alt="T-shirt"
-                                    src="https://i.ibb.co/2dSnXRB/355647907-240447435405477-8442957052502578329-n.jpg"
+                                    src="https://i.ibb.co/H4RZC8j/Whats-App-Image-2023-10-23-at-01-10-42-bf83df34.jpg"
                                     className="absolute inset-0 h-full w-full object-cover"
                                 />
                             </div>
                         </div>
 
-                        <div className="relative flex items-center bg-gray-100">
+                        <div className="relative flex items-center bg-pink-100">
                             <span
-                                className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"
+                                className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-pink-100"
                             ></span>
 
                             <div className="p-8 sm:p-16 lg:p-24">

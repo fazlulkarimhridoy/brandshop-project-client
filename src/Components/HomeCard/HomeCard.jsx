@@ -13,7 +13,7 @@ const HomeCard = ({ data }) => {
 
     return (
         <div>
-            <div className=" bg-gray-200 text-black border-2">
+            <div className=" bg-pink-200 text-black border-2">
                 <img src={image} alt="" className="object-cover object-center w-full h-80" />
                 <div className="flex flex-col justify-between p-6 space-y-8">
                     <div className="space-y-2">
