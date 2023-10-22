@@ -1,0 +1,1 @@
+export const image = "https://i.ibb.co/7C2FTzP/MENVERSE-3.png";
