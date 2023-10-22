@@ -39,6 +39,7 @@ const Login = () => {
                 const user = result.user;
                 if (user.uid) {
                     swal("Successfully Loggedin", "Congratulations you are signed in!", "success");
+                    navigate(location?.state ? location.state : '/')
                 }
                 console.log(user);
             })

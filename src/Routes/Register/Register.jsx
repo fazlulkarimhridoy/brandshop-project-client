@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useState } from "react";
 import swal from "sweetalert";
@@ -7,6 +7,8 @@ const Register = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { createUser, googleLogin } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
 
 
@@ -17,6 +19,7 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             swal("Successfully logged in with google", "You are logged in using google sign in method!", "success");
+            navigate(location?.state ? location.state : '/')
         })
     }
 
