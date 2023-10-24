@@ -2,6 +2,9 @@ import swal from 'sweetalert';
 
 
 const AddProducts = () => {
+
+
+
     // handleAddProduct
     const handleAddProduct = (event) => {
 
@@ -20,7 +23,7 @@ const AddProducts = () => {
         const product = { productName, brandName, image, price, type, rating, description }
 
         // fetching data from server using api
-        fetch('http://localhost:5000/addProducts', {
+        fetch('https://brand-shop-server-oibkfsmlr-fazlulkarimhridoy.vercel.app/addProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

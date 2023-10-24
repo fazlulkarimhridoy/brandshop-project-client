@@ -1,11 +1,10 @@
-import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import swal from "sweetalert";
 
 const ProductDetails = () => {
     const productDetails = useLoaderData();
     const { _id, productName, brandName, image, price, type, rating, description } = productDetails;
-    const location = useLocation();
-    const navigate = useNavigate();
+
 
 
     // handle addToCart 
@@ -23,7 +22,6 @@ const ProductDetails = () => {
                 console.log(data);
                 if(data.insertedId){
                     swal("Successful", "Product added to cart!", "success")
-                    navigate(location?.state ? location.state : '/')
                 }
             })
     }

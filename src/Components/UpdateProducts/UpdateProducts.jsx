@@ -24,7 +24,7 @@ const UpdateProducts = () => {
         const updatedProduct = { productName, brandName, image, price, type, rating, description }
 
         // fetching data from server using api
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`https://brand-shop-server-oibkfsmlr-fazlulkarimhridoy.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -38,7 +38,7 @@ const UpdateProducts = () => {
                 if (data.modifiedCount > 0) {
                     // sweet alert
                     swal("Successfully Updated!", "Product updated!", "success");
-                    navigate(location?.state ? location.state : '/')
+                    navigate(location?.state ? location.state : '/products')
                 }
             })
     }
