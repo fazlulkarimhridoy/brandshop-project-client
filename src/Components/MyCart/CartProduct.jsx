@@ -1,13 +1,10 @@
 /* eslint-disable react/prop-types */
 
-import { useLocation, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 const CartProduct = ({ data, carts, setCarts }) => {
 
     const { _id, productName, brandName, image, price, type } = data;
-    const location = useLocation();
-    const navigate = useNavigate();
 
     const handleDelete = id => {
         fetch(`https://brand-shop-server-oibkfsmlr-fazlulkarimhridoy.vercel.app/carts/${id}`, {
@@ -19,7 +16,6 @@ const CartProduct = ({ data, carts, setCarts }) => {
                         swal("Successful", "removed from cart!", "success");
                         const remainingCarts = carts.filter(data => data._id !== id);
                         setCarts(remainingCarts);
-                        navigate(location?.state ? location.state : '/')
                     }
                 }))
     }
